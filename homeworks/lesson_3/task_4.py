@@ -4,21 +4,36 @@
 # реализовать в виде функции my_func(x, y). При решении
 # задания необходимо обойтись без встроенной функции
 # возведения числа в степень.
+# Подсказка: попробуйте решить задачу двумя способами.
+# Первый — возведение в степень с помощью оператора **.
+# Второй — более сложная реализация без оператора **,
+# предусматривающая использование цикла.
 
-x = int(input("Введите целое положительное число"))
-y = int(input('Введите целое отрицательное число'))
-answer = x
-def my_func(x, y):
-    answer = x
-    y = y + 1
-    while y < 0:
-        answer = answer * x
-        y = y + 1
-    answer = 1 / answer
-    return answer
-user_answer = my_func(x, y)
+x = input("Введите действительное положительное число: ")
+y = int(input('Введите целое отрицательное число: '))
 
-print(  user_answer)
+# Определение и преобразование str в int или float
+if type(x) is str:
+    try:
+        x = int(x)
+    except ValueError:
+        x = float(x)
 
+# Используя **
+def my_func_1(x, y):
+    main = x
+    main = main ** y
+    return main
 
+#Используя цикл
+def my_func_2(x, y):
+    main = x
+    while y != -1:
+        main = main * x
+        y += 1
+    main = 1 / main
+    return main
 
+answer_1 = my_func_1(x, y)
+answer_2 = my_func_2(x, y)
+print(answer_1, ',', answer_2)

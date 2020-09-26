@@ -7,8 +7,10 @@
 # строки, но каждое слово должно начинаться с заглавной буквы.
 # Необходимо использовать написанную ранее функцию int_func().
 
-def int_func (*args):
-    word = input("Input words ")
-    print(word.title())
-    return
-int_func()
+my_text = input('Введите слово или текст: ')
+
+def int_func(word):
+    word = word.title()
+    return word
+
+print(int_func(my_text))
