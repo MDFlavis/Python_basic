@@ -1,0 +1,4 @@
+Petrov 30000
+Gofr 23000
+Noev 50000
+Fatima 5000
